@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Quản lý Tasks frontend với Gulp.js | NguyenLong</title>
+  <meta name="author" content="NguyenLong">
+  
+  <meta name="description" content="Gulp.js l&amp;#xE0; g&amp;#xEC;
+
+
+Khi l&amp;#xE0;m vi&amp;#x1EC7;c v&amp;#x1EDB;i v&amp;#x1EDB;i frontend m&amp;#xEC;nh th&amp;#x1B0;&amp;#x1EDD;ng ph&amp;#x1EA3;i c&amp;#xE1;c vi&amp;#x1EC7;c nh&amp;#x1B0; compile sass hay less th&amp;#xE0;nh css r&amp;#x1ED3;i g&amp;#xF4;m c&amp;#xE1;c file css ri&amp;#xEA;ng l&amp;#x1EBB; th&amp;#xE0;nh 1  file, g&amp;#xF4;m c&amp;#xE1;c th&amp;#x1B0; vi&amp;#x1EC7;n js v&amp;#xE0; c&amp;#xE1;c file js trong project l&amp;#x1EA1;i th&amp;#xE0;nh 1 file hay l&amp;#xE0; minify c&amp;#xE1;c file css , js ho&amp;#x1EB7;c image c&amp;#xE1;c vi&amp;#x1EC7;c n&amp;#xE0;y tr&amp;#x1B0;&amp;#x1EDB;c &amp;#x111;&amp;#xE2;y m&amp;#xEC;nh to&amp;#xE0;n ph&amp;#x1EA3;i t&amp;#x1EF1; l&amp;#xE0;m v&amp;#xE0; m&amp;#xEC;nh r&amp;#x1EA5;t gh&amp;#xE9;t &amp;#x111;i&amp;#x1EC1;u n&amp;#xE0;y :( hi&amp;#x1EC7;n t&amp;#x1EA1;i th&amp;#xEC; vi&amp;#x1EC7;c n&amp;#xE0;y &amp;#x111;&amp;#xE3; c&amp;#xF3; nhi&amp;#x1EC1;u tool &amp;#x111;&amp;#x1EC3; h&amp;#x1ED7; tr&amp;#x1EE3; m&amp;#xEC;nh l&amp;#xE0;m nh&amp;#x1B0; gulp v&amp;#xE0; grunt m&amp;#xEC;nh kh&amp;#xF4;ng th&amp;#xED;ch Grunt v&amp;#xEC; th&amp;#x1EA5;y n&amp;#xF3; config d&amp;#xE0;i d&amp;#xF2;ng ph&amp;#xFA;c t&amp;#x1EA1;p qu&amp;#xE1; n&amp;#x1EBF;u c&amp;#xF3; nhi&amp;#x1EC1;u stask th&amp;#xEC; s&amp;#x1EBD; r&amp;#x1EA5;t d&amp;#xE0;i v&amp;#xE0; kh&amp;#xF3; nh&amp;#xEC;n n&amp;#xEA;n m&amp;#xEC;nh ch&amp;#x1ECD;n Gulp">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Quản lý Tasks frontend với Gulp.js"/>
+  <meta property="og:site_name" content="NguyenLong"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="NguyenLong" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700|Radley' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+  
+</head>
+
+<body>
+  <header id="header" class="inner">
+    <div class="header-content">    
+    <div class="alignleft">
+      <h1><a href="/">NguyenLong</a></h1>
+      <h2><a href="/">Web Developer</a></h2>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        
+          <li><a href="/">Trang Chủ</a></li>
+        
+          <li><a href="/about">Tôi</a></li>
+        
+          <li><a href="/resume">Hồ Sơ</a></li>
+        
+          <li><a href="/portfolio">Công Việc</a></li>
+        
+          <li><a href="/archives">Ghi Chép</a></li>
+        
+      </ul>
+      <div class="clearfix"></div>
+    </nav>
+    <div class="clearfix"></div>
+</div>
+
+</header>
+  <div id="content" class="inner">
+    <div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">Quản lý Tasks frontend với Gulp.js</h1>
+  
+
+      
+        <p class="published">
+          Published: <time datetime="2014-07-27T19:21:13.000Z">Jul 28 2014</time>
+        </p>
+      
+    </header>
+    
+    <div class="entry-metas">
+        
+  
+  <div class="categories">
+  	<div class="entry-meta-title">Category</div>
+    <a href="/categories/Web-development/">Web development</a>
+  </div>
+
+        
+  
+  <div class="tags">
+  	<div class="entry-meta-title">Tags</div>
+    <a href="/tags/Gulp/">Gulp</a>
+  </div>
+
+        
+    </div>
+    
+    <div class="entry">
+      
+        <h3 id="Gulp-js_l&#xE0;_g&#xEC;">Gulp.js l&#xE0; g&#xEC;</h3>
+<img src="/images/gulp.png">
+
+<p>Khi l&#xE0;m vi&#x1EC7;c v&#x1EDB;i v&#x1EDB;i frontend m&#xEC;nh th&#x1B0;&#x1EDD;ng ph&#x1EA3;i c&#xE1;c vi&#x1EC7;c nh&#x1B0; compile sass hay less th&#xE0;nh css r&#x1ED3;i g&#xF4;m c&#xE1;c file css ri&#xEA;ng l&#x1EBB; th&#xE0;nh 1  file, g&#xF4;m c&#xE1;c th&#x1B0; vi&#x1EC7;n js v&#xE0; c&#xE1;c file js trong project l&#x1EA1;i th&#xE0;nh 1 file hay l&#xE0; minify c&#xE1;c file css , js ho&#x1EB7;c image c&#xE1;c vi&#x1EC7;c n&#xE0;y tr&#x1B0;&#x1EDB;c &#x111;&#xE2;y m&#xEC;nh to&#xE0;n ph&#x1EA3;i t&#x1EF1; l&#xE0;m v&#xE0; m&#xEC;nh r&#x1EA5;t gh&#xE9;t &#x111;i&#x1EC1;u n&#xE0;y :( hi&#x1EC7;n t&#x1EA1;i th&#xEC; vi&#x1EC7;c n&#xE0;y &#x111;&#xE3; c&#xF3; nhi&#x1EC1;u tool &#x111;&#x1EC3; h&#x1ED7; tr&#x1EE3; m&#xEC;nh l&#xE0;m nh&#x1B0; <a href="http://gulpjs.com/" target="_blank" rel="external">gulp</a> v&#xE0; <a href="http://gruntjs.com" target="_blank" rel="external">grunt</a> m&#xEC;nh kh&#xF4;ng th&#xED;ch <strong>Grunt</strong> v&#xEC; th&#x1EA5;y n&#xF3; config d&#xE0;i d&#xF2;ng ph&#xFA;c t&#x1EA1;p qu&#xE1; n&#x1EBF;u c&#xF3; nhi&#x1EC1;u stask th&#xEC; s&#x1EBD; r&#x1EA5;t d&#xE0;i v&#xE0; kh&#xF3; nh&#xEC;n n&#xEA;n m&#xEC;nh ch&#x1ECD;n <strong>Gulp</strong><br><a id="more"></a></p>
+<h3 id="C&#xE0;i_&#x111;&#x1EB7;t_Gulp-js">C&#xE0;i &#x111;&#x1EB7;t Gulp.js</h3>
+<p>c&#xE0;i &#x111;&#x1EB7;t gulp &#x1EDF; ch&#x1EBF; &#x111;&#x1ED9; global &#x111;&#x1EC3; s&#x1EED; d&#x1EE5;ng cho t&#x1EA5;t c&#xE1;c project</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>npm install gulp -g
+</pre></td></tr></table></figure>
+
+<p>n&#x1EBF;u mu&#x1ED1;n ch&#x1EC9; c&#xE0;i gulp cho project hi&#x1EC7;n t&#x1EA1;i th&#xF4;i th&#xEC;:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="comment">$</span> <span class="comment">npm</span> <span class="comment">install</span> <span class="comment">gulp</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">save</span><span class="literal">-</span><span class="comment">dev</span>
+</pre></td></tr></table></figure>
+
+<p>c&#xE1;ch n&#xE0;y s&#x1EBD; th&#xEA;m v&#xE0;o ph&#x1EA7;n <code>devDependencies</code> trong file <code>package.json</code> trong folder root c&#x1EE7;a project.</p>
+<h3 id="C&#xE0;i_&#x111;&#x1EB7;t_c&#xE1;c_plugin_c&#x1EA7;n_thi&#x1EBF;t">C&#xE0;i &#x111;&#x1EB7;t c&#xE1;c  plugin c&#x1EA7;n thi&#x1EBF;t</h3>
+<ul>
+<li>Autoprefixer (<a href="https://github.com/Metrime/gulp-autoprefixer" target="_blank" rel="external">gulp-autoprefixer</a>)</li>
+<li>Minify CSS (<a href="https://github.com/jonathanepollack/gulp-minify-css" target="_blank" rel="external">gulp-minify-css</a>)</li>
+<li>JSHint (<a href="https://github.com/wearefractal/gulp-jshint" target="_blank" rel="external">gulp-jshint</a>)</li>
+<li>Concatenation (<a href="https://github.com/wearefractal/gulp-concat" target="_blank" rel="external">gulp-concat</a>)</li>
+<li>Uglify (<a href="https://github.com/terinjokes/gulp-uglify" target="_blank" rel="external">gulp-uglify</a>)</li>
+<li>Compress images (<a href="https://github.com/sindresorhus/gulp-imagemin" target="_blank" rel="external">gulp-imagemin</a>)</li>
+<li>LiveReload (<a href="https://github.com/vohof/gulp-livereload" target="_blank" rel="external">gulp-livereload</a>)</li>
+<li>Clean files for a clean build (<a href="https://github.com/peter-vilja/gulp-clean" target="_blank" rel="external">gulp-clean</a>)</li>
+<li>Compass sass compile (<a href="https://github.com/appleboy/gulp-compass" target="_blank" rel="external">gulp-compass</a>)</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-autoprefixer</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-minify</span><span class="attribute">-css</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-jshint</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-concat</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-uglify</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-livereload</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-clean</span>
+$ npm install <span class="subst">--</span>save<span class="attribute">-dev</span> gulp<span class="attribute">-compass</span>
+</pre></td></tr></table></figure>
+
+<h3 id="T&#x1EA1;o_c&#xE1;c_tasks">T&#x1EA1;o c&#xE1;c tasks</h3>
+<p>&#x110;&#x1EC3; t&#x1EA1;o c&#xE1;c task tr&#x1B0;&#x1EDB;c ti&#xEA;n c&#x1EA7;n t&#x1EA1;o file <code>gulpfile.js</code> v&#xE0; m&#xEC;nh g&#x1ECD;i c&#xE1;c plugin c&#x1EA7;n thi&#x1EBF;t v&#xE0; t&#x1EA1;o c&#xE1;c task trong file n&#xE0;y. c&#xE1;ch l&#xE0;m c&#xF3; th&#x1EC3; xem tr&#xEA;n <a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md" target="_blank" rel="external">gulp API docs</a></p>
+<p>file <code>gulpfile.js</code> trong project c&#x1EE7;a m&#xEC;nh</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+</pre></td><td class="code"><pre><span class="comment">//g&#x1ECD;i c&#xE1;c plugin c&#x1EA7;n thi&#x1EBF;t</span>
+<span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">&apos;gulp&apos;</span>),
+		gutil = <span class="built_in">require</span>(<span class="string">&apos;gulp-util&apos;</span>),
+		uglify = <span class="built_in">require</span>(<span class="string">&apos;gulp-uglify&apos;</span>),
+		concat = <span class="built_in">require</span>(<span class="string">&apos;gulp-concat&apos;</span>),
+		autoprefix = <span class="built_in">require</span>(<span class="string">&apos;gulp-autoprefixer&apos;</span>),
+		minifyCSS = <span class="built_in">require</span>(<span class="string">&apos;gulp-minify-css&apos;</span>),
+		notify = <span class="built_in">require</span>(<span class="string">&apos;gulp-notify&apos;</span>),
+		compass = <span class="built_in">require</span>(<span class="string">&apos;gulp-compass&apos;</span>);
+
+<span class="comment">// khai b&#xE1;o c&#xE1;c &#x111;&#x1B0;&#x1EDD;ng d&#x1EAB;n v&#xE0; file s&#x1EBD; d&#xF9;ng		</span>
+<span class="keyword">var</span> paths = {
+	css: [<span class="string">&apos;public/admin/components/bootstrap/dist/css/bootstrap.min.css&apos;</span>,
+		<span class="string">&apos;public/admin/components/font-awesome/css/font-awesome.min.css&apos;</span>,
+		<span class="string">&apos;public/admin/components/ionicons/css/ionicons.min.css&apos;</span>,
+		<span class="string">&apos;public/admin/css/daterangepicker/daterangepicker-bs3.css&apos;</span>,
+		<span class="string">&apos;public/admin/components/bootstrap3-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css&apos;</span>,
+		<span class="string">&apos;public/admin/components/angular-loading-bar/build/loading-bar.min.css&apos;</span>,
+		<span class="string">&apos;public/admin/css/AdminLTE.css&apos;</span>,
+		<span class="string">&apos;public/admin/css/sass/style.css&apos;</span>
+	],
+	sass: [<span class="string">&apos;public/admin/sass/*.scss&apos;</span>]
+};
+
+<span class="comment">//t&#x1EA1;o task cho js</span>
+gulp.task(<span class="string">&apos;js&apos;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+	gulp.src(paths.js)
+			.pipe(uglify())
+			.pipe(concat(<span class="string">&apos;admin.min.js&apos;</span>))
+			.pipe(gulp.dest(<span class="string">&apos;public/admin/build/js&apos;</span>));
+});
+
+<span class="comment">//t&#x1EA1;o task cho css</span>
+gulp.task(<span class="string">&apos;css&apos;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+	gulp.src(paths.css)
+			.pipe(concat(<span class="string">&apos;admin.min.css&apos;</span>))
+			.pipe(minifyCSS())
+			.pipe(gulp.dest(<span class="string">&apos;public/admin/build_css&apos;</span>));
+});
+
+<span class="comment">//t&#x1EA1;o task cho compass</span>
+gulp.task(<span class="string">&apos;compass&apos;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+	gulp.src(paths.sass)
+			.pipe(compass({
+				css: <span class="string">&apos;public/admin/css/sass&apos;</span>,
+				sass: <span class="string">&apos;public/admin/sass&apos;</span>,
+				image: <span class="string">&apos;public/admin/img&apos;</span>
+			}))
+			.on(<span class="string">&apos;error&apos;</span>, <span class="function"><span class="keyword">function</span><span class="params">(err)</span> {</span>
+				<span class="comment">// Would like to catch the error here</span>
+			})
+			.pipe(minifyCSS())
+			.pipe(gulp.dest(<span class="string">&apos;public/admin/css/sass&apos;</span>));
+});
+
+<span class="comment">//t&#x1EA1;o task watch &#x111;&#x1EC3; theo d&#xF5;i c&#xE1;c file n&#x1EBF;u file thay &#x111;&#x1ED5;i th&#xEC; th&#x1EF1;c hi&#x1EC7;n c&#xE1;c task li&#xEA;n quan </span>
+gulp.task(<span class="string">&apos;watch&apos;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+	gulp.watch(paths.sass, [<span class="string">&apos;compass&apos;</span>]);
+	gulp.watch(paths.css, [<span class="string">&apos;css&apos;</span>]);
+});
+
+<span class="comment">//t&#x1EA1;o task default : l&#xE0; c&#xE1;c vi&#x1EC7;c s&#x1EBD; l&#xE0;m tu&#x1EA7;n t&#x1EF1; khi ta ch&#x1EC9; d&#xF9;ng l&#x1EC7;nh gulp ko k&#xE8;m option task n&#xE0;o</span>
+gulp.task(<span class="string">&apos;default&apos;</span>, [
+	<span class="string">&apos;compass&apos;</span>,
+	<span class="string">&apos;css&apos;</span>,
+	<span class="string">&apos;watch&apos;</span>
+]);
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+<!-- hackish -->
+
+  
+<section id="comment">
+          
+  <h1 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:nguyenlong.info">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/DevOps/">DevOps</a><small>1</small></li>
+  
+    <li><a href="/categories/Web-development/">Web development</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Capistrano/">Capistrano</a><small>1</small></li>
+  
+    <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/Gulp/">Gulp</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 NguyenLong
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'nguyenlong';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
