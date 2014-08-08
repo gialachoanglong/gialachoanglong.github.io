@@ -592,7 +592,6 @@ article footer .addthis iframe {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  width: calc(100% - 150px);
   max-width: 600px;
   min-height: 490px;
   background: #fff;
@@ -673,6 +672,7 @@ article footer .addthis iframe {
 @media screen and (max-width: 800px) {
   #sidebar {
     display: inline-block;
+    display: none;
   }
 }
 #sidebar .widget {
