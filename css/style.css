@@ -29,13 +29,9 @@ body {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 900px) {
   body {
-    margin: 0 30px;
-  }
-}
-@media screen and (max-width: 600px) {
-  body {
+    background-position: right 70px;
     font-size: 13px;
   }
 }
@@ -98,20 +94,16 @@ a:hover {
     margin-right: -300px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   #main-col {
     margin-right: 0;
     float: none;
   }
 }
-@media screen and (max-width: 1260px) {
-  #wrapper {
-    margin-right: 300px;
-  }
-}
 @media screen and (max-width: 900px) {
   #wrapper {
     margin-right: 0;
+    padding: 10px;
   }
 }
 #header {
@@ -133,6 +125,11 @@ a:hover {
 #header .header-content {
   width: 700px;
   margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  #header .header-content {
+    width: 100%;
+  }
 }
 #header .header-content a color ##58fb8,
 #header .header-content a:hover {
@@ -171,19 +168,40 @@ a:hover {
   margin-top: 10px;
   float: right;
 }
+@media screen and (max-width: 800px) {
+  #header .header-content #main-nav {
+    width: 100%;
+    text-align: center;
+    margin-left: 0px !important;
+  }
+}
 #header .header-content #main-nav ul {
   list-style: none;
+}
+@media screen and (max-width: 800px) {
+  #header .header-content #main-nav ul {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
 }
 #header .header-content #main-nav ul li {
   float: left;
   margin-left: 30px;
+}
+@media screen and (max-width: 800px) {
+  #header .header-content #main-nav ul li {
+    margin: 0px 8px 0px 8px;
+    display: inline-block;
+    float: none;
+  }
 }
 #header .header-content #main-nav ul li a {
   color: #555;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   text-decoration: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   #header .header-content #main-nav {
     float: left;
     margin-left: -30px;
@@ -573,12 +591,19 @@ article footer .addthis iframe {
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
-  max-width: 100%;
+  width: 100%;
+  width: calc(100% - 150px);
+  max-width: 600px;
   min-height: 490px;
   background: #fff;
   margin-top: 50px;
   position: relative;
+}
+@media screen and (max-width: 900px) {
+  #content {
+    display: inline-block;
+    margin-top: 130px;
+  }
 }
 #pagination a {
   display: block;
@@ -636,19 +661,18 @@ article footer .addthis iframe {
   margin-bottom: 0;
 }
 #sidebar {
-  width: 170px;
+  width: 150px;
   position: absolute;
-  right: -235px;
+  right: -175px;
   top: 220px;
   line-height: 1.8em;
   border-left: 1px solid #ccc;
   padding-left: 15px;
   padding-bottom: 30px;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   #sidebar {
-    float: none;
-    width: 100%;
+    display: inline-block;
   }
 }
 #sidebar .widget {
@@ -745,6 +769,11 @@ article footer .addthis iframe {
   margin-right: auto;
   font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0 1px #fff;
+}
+@media screen and (max-width: 800px) {
+  #footer {
+    width: 100%;
+  }
 }
 .entry .gist {
   background: #eee;
