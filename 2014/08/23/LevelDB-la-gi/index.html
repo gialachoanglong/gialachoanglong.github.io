@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>LevelDB là gì? | NguyenLong</title>
+  <meta name="author" content="NguyenLong">
+  
+  <meta name="description" content="LevelDB l&amp;#xE0; m&amp;#x1ED9;t th&amp;#x1B0; vi&amp;#x1EC7;n l&amp;#x1B0;u tr&amp;#x1EEF;  theo d&amp;#x1EA1;ng key-value &amp;#x111;&amp;#x1B0;&amp;#x1EE3;c vi&amp;#x1EBF;t b&amp;#x1EDF;i Google, LevelDB &amp;#x111;&amp;#x1B0;&amp;#x1EE3;c sort theo keys v&amp;#xE0; s&amp;#x1EED; d&amp;#x1EE5;ng Snappy &amp;#x111;&amp;#x1EC3; n&amp;#xE9;n d&amp;#x1EEF; li&amp;#x1EC7;u do &amp;#x111;&amp;#xF3; data &amp;#x111;&amp;#x1B0;&amp;#x1EE3;c n&amp;#xE9;n r&amp;#x1EA5;t t&amp;#x1ED1;n gi&amp;#xFA;p gi&amp;#x1EA3;m dung l&amp;#x1B0;&amp;#x1EE3;ng l&amp;#x1B0;u tr&amp;#x1EEF;.c&amp;#xF3; c&amp;#xE1;c h&amp;#xE0;m c&amp;#x1A1; b&amp;#x1EA3;n c&amp;#x1EE7;a 1 keys values nh&amp;#x1B0; : Get(), Put(), Del(), Batch()">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="LevelDB là gì?"/>
+  <meta property="og:site_name" content="NguyenLong"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="NguyenLong" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700|Radley' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+  
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53660213-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body>
+  <header id="header" class="inner">
+    <div class="header-content">    
+    <div class="alignleft">
+      <h1><a href="/">NguyenLong</a></h1>
+      <h2><a href="/">Web Developer</a></h2>
+    </div>
+    <nav id="main-nav">
+      <ul>
+        
+          <li><a href="/">Trang Chủ</a></li>
+        
+          <li><a href="/about">Tôi</a></li>
+        
+          <li><a href="/resume">Hồ Sơ</a></li>
+        
+          <li><a href="/portfolio">Công Việc</a></li>
+        
+          <li><a href="/archives">Ghi Chép</a></li>
+        
+      </ul>
+      <div class="clearfix"></div>
+    </nav>
+    <div class="clearfix"></div>
+</div>
+
+</header>
+  <div id="content" class="inner">
+    <div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">LevelDB là gì?</h1>
+  
+
+      
+        <p class="published">
+          Published: <time datetime="2014-08-23T15:23:21.000Z">Aug 23 2014</time>
+        </p>
+      
+    </header>
+    
+    <div class="entry-metas">
+        
+  
+  <div class="categories">
+  	<div class="entry-meta-title">Category</div>
+    <a href="/categories/Databases/">Databases</a>
+  </div>
+
+        
+  
+  <div class="tags">
+  	<div class="entry-meta-title">Tags</div>
+    <a href="/tags/Nodejs/">Nodejs</a> <a href="/tags/Leveldb/">Leveldb</a>
+  </div>
+
+        
+    </div>
+    
+    <div class="entry">
+      
+        <center><br>    <img src="/images/leveldb.png"><br></center><br><a href="https://code.google.com/p/leveldb/" target="_blank" rel="external">LevelDB</a> l&#xE0; m&#x1ED9;t th&#x1B0; vi&#x1EC7;n l&#x1B0;u tr&#x1EEF;  theo d&#x1EA1;ng key-value &#x111;&#x1B0;&#x1EE3;c vi&#x1EBF;t b&#x1EDF;i Google, <a href="https://code.google.com/p/leveldb/" target="_blank" rel="external">LevelDB</a> &#x111;&#x1B0;&#x1EE3;c sort theo keys v&#xE0; s&#x1EED; d&#x1EE5;ng <a href="https://code.google.com/p/snappy/" target="_blank" rel="external">Snappy</a> &#x111;&#x1EC3; n&#xE9;n d&#x1EEF; li&#x1EC7;u do &#x111;&#xF3; data &#x111;&#x1B0;&#x1EE3;c n&#xE9;n r&#x1EA5;t t&#x1ED1;n gi&#xFA;p gi&#x1EA3;m dung l&#x1B0;&#x1EE3;ng l&#x1B0;u tr&#x1EEF;.<br>c&#xF3; c&#xE1;c h&#xE0;m c&#x1A1; b&#x1EA3;n c&#x1EE7;a 1 keys values nh&#x1B0; : <em>Get()</em>, <em>Put()</em>, <em>Del()</em>, <em>Batch()</em><br><a id="more"></a><br># Ki&#x1EBF;n tr&#xFA;c c&#x1A1; b&#x1EA3;n c&#x1EE7;a levelDB<br><center><br>    <img src="/images/leveldb_simple.png"><br></center><br>T&#x1EA5;t c&#x1EA3; d&#x1EEF; li&#x1EC7;u khi &#x111;&#x1B0;&#x1EE3;c &#x111;&#x1B0;a v&#xE0;o LevelDB s&#x1EBD; &#x111;&#x1B0;&#x1EE3;c ghi th&#x1EB3;ng v&#xE0;o <strong>log</strong> v&#xE0; m&#x1ED9;t &#x201C;memtable&#x201D;. <strong>Log</strong> n&#xE0;y th&#x1B0;&#x1EDD;ng xuy&#xEA;n &#x111;&#x1B0;&#x1EE3;c ghi v&#xE0;o 1 file &#x111;&#x1B0;&#x1EE3;c g&#x1ECD;i l&#xE0; <em>sorted string table</em> <strong>(SST)</strong><br><br>khi &#x111;&#x1ECD;c th&#xEC; d&#x1EEF; li&#x1EC7;u &#x111;&#x1B0;&#x1EE3;c l&#x1EA5;y ra t&#x1EEB; Log v&#xE0; SST v&#xE0; &#x111;&#x1B0;&#x1EE3;c &#x111;&#x1B0;a v&#xE0;o ph&#x1EA7;n <strong>Cache</strong> &#x111;&#x1EC3; gi&#xFA;p vi&#x1EC7;c &#x111;&#x1ECD;c d&#x1EEF; li&#x1EC7;u nhanh h&#x1A1;n <strong>Cache</strong> &#x111;&#x1B0;&#x1EE3;c l&#x1B0;u tr&#xEA;n Ram<br><br>M&#x1ED7;i SST &#x111;&#x1B0;&#x1EE3;c gi&#x1EDB;i h&#x1EA1;n  ~2MB do &#x111;&#xF3; LevelDB c&#xF3; r&#x1EA5;t nhi&#x1EC1;u file SST.<br><br>D&#x1EEF; li&#x1EC7;u trong LevelDB &#x111;&#x1B0;&#x1EE3;c l&#x1B0;u theo c&#xE1;c <strong>level</strong><br><br><strong>Log:</strong>    t&#x1ED1;i &#x111;a l&#xE0; 4MB sau &#x111;&#xF3; &#x111;&#x1B0;&#x1EE3;c ghi v&#xE0;o c&#xE1;c file SST &#x1EDF; Level 0<br><strong>Level 0:</strong> t&#x1ED1;i data l&#xE0;  4 file SST sau &#x111;&#xF3; 1 file SST &#x111;&#x1B0;&#x1EE3;c chuyu&#x1EC3;n v&#xE0;o Level 1<br><strong>Level 1:</strong>    t&#x1ED5;ng k&#xED;ch th&#x1B0;&#x1EDB;c l&#xE0; 10MB sau &#x111;&#xF3; 1 file SST &#x111;&#x1B0;&#x1EE3;c chuyu&#x1EC3;n v&#xE0;o Level 2<br><strong>Level 2:</strong>    t&#x1ED5;ng k&#xED;ch th&#x1B0;&#x1EDB;c l&#xE0; 100MB sau &#x111;&#xF3; 1 file SST &#x111;&#x1B0;&#x1EE3;c chuyu&#x1EC3;n v&#xE0;o Level 3<br><strong>Level 3+:</strong>    c&#x1EE9; nh&#x1B0; v&#xE2;yj th&#x1ED5;ng k&#xED;ch th&#x1B0;&#x1EDB;c c&#x1EE7;a level n&#xE0;y = level tr&#x1B0;&#x1EDB;c n&#xF3; x 10 v&#xE0; sau &#x111;&#xF3; 1 file &#x111;&#x1B0;&#x1EE3;c chuy&#x1EC3;n xu&#x1ED1;ng level cao h&#x1A1;n.<br>nh&#x1B0; v&#x1EAD;y ta c&#xF3;<br><em>0 &#x21A0; 4 SST, 1 &#x21A0; 10M, 2 &#x21A0; 100M, 3 &#x21A0; 1G, 4 &#x21A0; 10G, 5 &#x21A0; 100G, 6 &#x21A0; 1T, 7 &#x21A0; 10T</em><br><br><center><br>    <img src="/images/leveldb_levels.png"><br></center>
+
+<h1 id="D&#xF9;ng_levelDB_v&#x1EDB;i_Nodejs">D&#xF9;ng levelDB v&#x1EDB;i Nodejs</h1>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>npm install levelup leveldown
+</pre></td></tr></table></figure><br> ho&#x1EB7;c<br> <figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>npm install level
+</pre></td></tr></table></figure>
+
+<p>c&#xE1;c d&#xF9;ng leveldb trong nodejs<br> <figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre> var levelup = <span class="built_in">require</span>(<span class="string">&apos;levelup&apos;</span>)
+<span class="comment">
+// 1) Create our database, supply location and options.</span><span class="comment">
+//    This will create or open the underlying LevelDB store.</span>
+var db = levelup(<span class="string">&apos;./mydb&apos;</span>)
+<span class="comment">
+// 2) put a key &amp; value</span>
+db.<span class="built_in">put</span>(<span class="string">&apos;name&apos;</span>, <span class="string">&apos;LevelUP&apos;</span>, <span class="function"><span class="keyword">function</span> (<span class="title">err</span>) {</span>
+  <span class="keyword">if</span> (err) <span class="constant">return</span> console.<span class="built_in">log</span>(<span class="string">&apos;Ooops!&apos;</span>, err)<span class="comment"> // some kind of I/O error</span>
+
+ <span class="comment"> // 3) fetch by key</span>
+  db.<span class="built_in">get</span>(<span class="string">&apos;name&apos;</span>, <span class="function"><span class="keyword">function</span> (<span class="title">err</span>, <span class="title">value</span>) {</span>
+    <span class="keyword">if</span> (err) <span class="constant">return</span> console.<span class="built_in">log</span>(<span class="string">&apos;Ooops!&apos;</span>, err)<span class="comment"> // likely the key was not found</span>
+
+   <span class="comment"> // ta da!</span>
+    console.<span class="built_in">log</span>(<span class="string">&apos;name=&apos;</span> + <span class="built_in">value</span>)
+  })
+})
+</pre></td></tr></table></figure></p>
+<h1 id="API">API</h1>
+<ul>
+<li>levelup()</li>
+<li>db.open()</li>
+<li>db.close()</li>
+<li>db.put()</li>
+<li>db.get()</li>
+<li>db.del()</li>
+<li>db.batch() (array form)</li>
+<li>db.batch() (chained form)</li>
+<li>db.isOpen()</li>
+<li>db.isClosed()</li>
+<li>db.createReadStream()</li>
+<li>db.createKeyStream()</li>
+<li>db.createValueStream()</li>
+<li>db.createWriteStream()</li>
+</ul>
+<p>xem docs chi ti&#x1EBF;t &#x1EDF; <a href="https://github.com/rvagg/node-levelup" target="_blank" rel="external">github/node-levelup</a></p>
+
+      
+    </div>
+    <footer>
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+<!-- hackish -->
+
+  
+<section id="comment">
+          
+  <h1 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:nguyenlong.info">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Databases/">Databases</a><small>1</small></li>
+  
+    <li><a href="/categories/DevOps/">DevOps</a><small>1</small></li>
+  
+    <li><a href="/categories/Web-development/">Web development</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Capistrano/">Capistrano</a><small>1</small></li>
+  
+    <li><a href="/tags/Deploy/">Deploy</a><small>1</small></li>
+  
+    <li><a href="/tags/Gulp/">Gulp</a><small>1</small></li>
+  
+    <li><a href="/tags/Leveldb/">Leveldb</a><small>1</small></li>
+  
+    <li><a href="/tags/Nodejs/">Nodejs</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 NguyenLong
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'nguyenlong';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

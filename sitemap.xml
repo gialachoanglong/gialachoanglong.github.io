@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nguyenlong.info/2013/09/06/deploying-with-capistrano/</loc>
-    <lastmod>2014-07-27T21:34:47.000Z</lastmod>
+    <loc>http://nguyenlong.info/2014/08/23/LevelDB-la-gi/</loc>
+    <lastmod>2014-08-27T14:47:10.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://nguyenlong.info/2014/07/28/Quan-ly-Tasks-frontend-voi-Gulp/</loc>
-    <lastmod>2014-07-27T21:21:52.000Z</lastmod>
+    <lastmod>2014-08-23T15:27:19.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nguyenlong.info/2013/09/06/deploying-with-capistrano/</loc>
+    <lastmod>2014-07-27T21:34:47.000Z</lastmod>
   </url>
   
   <url>
