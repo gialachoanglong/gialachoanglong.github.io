@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nguyenlong.info/2014/08/27/Day-chinh-la-tinh-than-quy-toc/</loc>
-    <lastmod>2014-08-27T14:59:37.000Z</lastmod>
+    <loc>http://nguyenlong.info/2014/08/28/Install-RethinkDB-on-Mac-OSX/</loc>
+    <lastmod>2014-08-28T05:55:58.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://nguyenlong.info/2014/08/23/LevelDB-la-gi/</loc>
-    <lastmod>2014-08-27T14:47:10.000Z</lastmod>
+    <lastmod>2014-08-28T05:32:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://nguyenlong.info/2014/08/27/Day-chinh-la-tinh-than-quy-toc/</loc>
+    <lastmod>2014-08-27T14:59:37.000Z</lastmod>
   </url>
   
   <url>

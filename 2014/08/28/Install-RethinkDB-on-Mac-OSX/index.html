@@ -3,13 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Databases | NguyenLong | Gia lạc tạp ký </title>
+  <title>Install RethinkDB on Mac OSX | NguyenLong | Gia lạc tạp ký </title>
   <meta name="author" content="NguyenLong">
+  
+  <meta name="description" content="c&amp;#xE0;i &amp;#x111;&amp;#x1EB7;t RethinkDB b&amp;#x1EB1;ng Homebrew n&amp;#x1EBF;u ch&amp;#x1B0;a c&amp;#xF3; th&amp;#xEC; c&amp;#xE0;i homebrew tr&amp;#x1B0;&amp;#x1EDB;c
+1
+ruby -e &amp;quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&amp;quot;
+Install RethinkDB:1
+2
+brew update
+brew install rethinkdb">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Install RethinkDB on Mac OSX"/>
   <meta property="og:site_name" content="NguyenLong"/>
 
   
@@ -66,11 +74,7 @@
 
 </header>
   <div id="content" class="inner">
-    <div id="wrapper">
-<h2 class="archive-title category">Databases</h2>
-
-  
-    <article class="post">
+    <div id="wrapper"><article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -88,29 +92,74 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/08/23/LevelDB-la-gi/">LevelDB là gì?</a></h1>
+    <h1 class="title">Install RethinkDB on Mac OSX</h1>
   
 
       
         <p class="published">
-          Published: <time datetime="2014-08-23T15:23:21.000Z">Aug 23 2014</time>
+          Published: <time datetime="2014-08-28T05:25:27.000Z">Aug 28 2014</time>
         </p>
       
     </header>
     
+    <div class="entry-metas">
+        
+  
+  <div class="categories">
+  	<div class="entry-meta-title">Category</div>
+    <a href="/categories/Database/">Database</a>
+  </div>
+
+        
+  
+  <div class="tags">
+  	<div class="entry-meta-title">Tags</div>
+    <a href="/tags/RethinkDB/">RethinkDB</a>
+  </div>
+
+        
+    </div>
+    
     <div class="entry">
       
-        <center><br>    <img src="/images/leveldb.png"><br></center><br><a href="https://code.google.com/p/leveldb/" target="_blank" rel="external">LevelDB</a> l&#xE0; m&#x1ED9;t th&#x1B0; vi&#x1EC7;n l&#x1B0;u tr&#x1EEF;  theo d&#x1EA1;ng key-value &#x111;&#x1B0;&#x1EE3;c vi&#x1EBF;t b&#x1EDF;i Google, <a href="https://code.google.com/p/leveldb/" target="_blank" rel="external">LevelDB</a> &#x111;&#x1B0;&#x1EE3;c sort theo keys v&#xE0; s&#x1EED; d&#x1EE5;ng <a href="https://code.google.com/p/snappy/" target="_blank" rel="external">Snappy</a> &#x111;&#x1EC3; n&#xE9;n d&#x1EEF; li&#x1EC7;u do &#x111;&#xF3; data &#x111;&#x1B0;&#x1EE3;c n&#xE9;n r&#x1EA5;t t&#x1ED1;n gi&#xFA;p gi&#x1EA3;m dung l&#x1B0;&#x1EE3;ng l&#x1B0;u tr&#x1EEF;.<br>c&#xF3; c&#xE1;c h&#xE0;m c&#x1A1; b&#x1EA3;n c&#x1EE7;a 1 keys values nh&#x1B0; : <em>Get()</em>, <em>Put()</em>, <em>Del()</em>, <em>Batch()</em><br>
+        <center><br>    <img src="/images/rethinkdb.png"><br></center>
+
+<p>c&#xE0;i &#x111;&#x1EB7;t RethinkDB b&#x1EB1;ng Homebrew n&#x1EBF;u ch&#x1B0;a c&#xF3; th&#xEC; c&#xE0;i homebrew tr&#x1B0;&#x1EDB;c</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>ruby <span class="operator">-e</span> <span class="string">&quot;<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>&quot;</span>
+</pre></td></tr></table></figure><br>Install RethinkDB:<br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>brew <span class="operator"><span class="keyword">update</span>
+brew install rethinkdb</span>
+</pre></td></tr></table></figure><br><a id="more"></a><br>load rethinkdb<br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>launchctl load ~/Library/LaunchAgents/homebrew<span class="preprocessor">.mxcl</span><span class="preprocessor">.rethinkdb</span><span class="preprocessor">.plist</span>
+</pre></td></tr></table></figure>
+
+<p> &#x111;&#x1EC3; start RethinkDB l&#xFA;c login</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre> <span class="built_in">ln</span> -sfv /usr/<span class="built_in">local</span>/opt/rethinkdb<span class="comment">/*.plist ~/Library/LaunchAgents
+ </span>
+</pre></td></tr></table></figure>
+
+<p>s&#x1EED;a file <code>~/.bashrc</code> &#x111;&#x1EC3; t&#x1EA1;o shortcuts cho vi&#x1EC7;c start/stop rethinkdb</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="keyword">alias</span> rethinkdb.start=<span class="comment">&apos;launchctl load /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist&apos;</span>
+<span class="keyword">alias</span> rethinkdb.<span class="keyword">stop</span>=<span class="comment">&apos;launchctl unload /usr/local/opt/rethinkdb/homebrew.mxcl.rethinkdb.plist&apos;</span>
+</pre></td></tr></table></figure>
+
+<p>run <code>source ~/.bashrc</code> &#x111;&#x1EC3; update shell environment.</p>
+<p>Run <code>rethinkdb.start</code> v&#xF4; trang admin panel c&#x1EE7;a rethinkdb <a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080/</a></p>
+<h1 id="N&#xE2;ng_c&#x1EA5;p_rethinkDB">N&#xE2;ng c&#x1EA5;p rethinkDB</h1>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>brew <span class="operator"><span class="keyword">update</span>
+brew upgrade rethinkdb</span>
+</pre></td></tr></table></figure>
       
     </div>
     <footer>
-      
-        
-          <div id="readmore" class="alignright">
-            <a href="/2014/08/23/LevelDB-la-gi/#more" class="more-link">Xem thêm</a>
-          </div>
-        
-        
       
       <div class="clearfix"></div>
     </footer>
@@ -119,11 +168,14 @@
 <!-- hackish -->
 
   
-  <nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav>
+<section id="comment">
+          
+  <h1 class="title">Comments</h1>
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
 </div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -138,7 +190,7 @@
   <h3 class="title">Categories</h3>
   <ul class="entry">
   
-    <li><a href="/categories/Databases/">Databases</a><small>1</small></li>
+    <li><a href="/categories/Database/">Database</a><small>2</small></li>
   
     <li><a href="/categories/DevOps/">DevOps</a><small>1</small></li>
   
@@ -167,6 +219,8 @@
   
     <li><a href="/tags/Nodejs/">Nodejs</a><small>1</small></li>
   
+    <li><a href="/tags/RethinkDB/">RethinkDB</a><small>1</small></li>
+  
   </ul>
 </div>
 
@@ -190,7 +244,7 @@ var disqus_shortname = 'nguyenlong';
   var dsq = document.createElement('script');
   dsq.type = 'text/javascript';
   dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }());
 </script>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Capistrano | NguyenLong | Gia lạc tạp ký </title>
+  <title>RethinkDB | NguyenLong | Gia lạc tạp ký </title>
   <meta name="author" content="NguyenLong">
   
   
@@ -67,7 +67,7 @@
 </header>
   <div id="content" class="inner">
     <div id="wrapper">
-<h2 class="archive-title tag">Capistrano</h2>
+<h2 class="archive-title tag">RethinkDB</h2>
 
   
     <article class="post">
@@ -88,27 +88,35 @@
     <header>
       
   
-    <h1 class="title"><a href="/2013/09/06/deploying-with-capistrano/">Deploy ứng dụng web với Capistrano</a></h1>
+    <h1 class="title"><a href="/2014/08/28/Install-RethinkDB-on-Mac-OSX/">Install RethinkDB on Mac OSX</a></h1>
   
 
       
         <p class="published">
-          Published: <time datetime="2013-09-06T08:03:52.000Z">Sep 6 2013</time>
+          Published: <time datetime="2014-08-28T05:25:27.000Z">Aug 28 2014</time>
         </p>
       
     </header>
     
     <div class="entry">
       
-        <h1 id="Capistrano_l&#xE0;_g&#xEC;">Capistrano l&#xE0; g&#xEC;</h1>
-<img src="/images/Capistrano.png"><br>Capistrano l&#xE0; m&#x1ED9;t ch&#x1B0;&#x1A1;ng tr&#xEC;nh &#x111;&#x1B0;&#x1EE3;c vi&#x1EBF;t b&#x1EB1;ng Ruby cung c&#x1EA5;p cho b&#x1EA1;n m&#x1ED9;t b&#x1ED9; c&#xF4;ng c&#x1EE5; ti&#xEA;n ti&#x1EBF;n &#x111;&#x1EC3; tri&#x1EC3;n khai c&#xE1;c &#x1EE9;ng d&#x1EE5;ng web &#x111;&#x1EBF;n c&#xE1;c m&#xE1;y ch&#x1EE7; c&#x1EE7;a b&#x1EA1;n. Capistrano cho ph&#xE9;p b&#x1EA1;n sao ch&#xE9;p m&#xE3; t&#x1EEB;  (SVN ho&#x1EB7;c Git) &#x111;&#x1EBF;n m&#xE1;y ch&#x1EE7; th&#xF4;ng qua SSH, v&#xE0; th&#x1EF1;c hi&#x1EC7;n ch&#x1EE9;c n&#x103;ng tr&#x1B0;&#x1EDB;c v&#xE0; sau khi tri&#x1EC3;n khai nh&#x1B0; kh&#x1EDF;i &#x111;&#x1ED9;ng l&#x1EA1;i m&#x1ED9;t m&#xE1;y ch&#x1EE7; web, b&#x1ED9; nh&#x1EDB; cache busting, &#x111;&#x1ED5;i t&#xEA;n t&#x1EAD;p tin, ch&#x1EA1;y di chuy&#x1EC3;n c&#x1A1; s&#x1EDF; d&#x1EEF; li&#x1EC7;u v&#xE0; vv. V&#x1EDB;i Capistrano n&#xF3; c&#x169;ng c&#xF3; th&#x1EC3; &#x111;&#x1EC3; tri&#x1EC3;n khai &#x111;&#x1EBF;n nhi&#x1EC1;u m&#xE1;y c&#xF9;ng m&#x1ED9;t l&#xFA;c.<br><br>Capistrano cung c&#x1EA5;p nhi&#x1EC1;u t&#xF9;y ch&#x1ECD;n n&#xE2;ng cao c&#xF3; th&#x1EC3; &#x111;&#x1B0;&#x1EE3;c s&#x1EED; d&#x1EE5;ng &#x111;&#x1EC3; tri&#x1EC3;n khai nhi&#x1EC1;u lo&#x1EA1;i &#x1EE9;ng d&#x1EE5;ng. trong b&#xE0;i vi&#x1EBF;t n&#xE0;y m&#xEC;nh n&#xF3;i v&#x1EC1; c&#xE1;c b&#x1B0;&#x1EDB;c &#x111;&#x1EC3; thi&#x1EBF;t l&#x1EAD;p m&#x1ED9;t c&#xE1;ch &#x111;&#x1A1;n gi&#x1EA3;n cho vi&#x1EC7;c tri&#x1EC3;n khai m&#x1ED9;t &#x1EE9;ng d&#x1EE5;ng c&#x1A1; b&#x1EA3;n cho m&#x1ED9;t m&#xE1;y ch&#x1EE7; duy nh&#x1EA5;t t&#x1EEB; m&#x1ED9;t trong hai kho SVN ho&#x1EB7;c Git.<br>
+        <center><br>    <img src="/images/rethinkdb.png"><br></center>
+
+<p>c&#xE0;i &#x111;&#x1EB7;t RethinkDB b&#x1EB1;ng Homebrew n&#x1EBF;u ch&#x1B0;a c&#xF3; th&#xEC; c&#xE0;i homebrew tr&#x1B0;&#x1EDB;c</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>ruby <span class="operator">-e</span> <span class="string">&quot;<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>&quot;</span>
+</pre></td></tr></table></figure><br>Install RethinkDB:<br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>brew <span class="operator"><span class="keyword">update</span>
+brew install rethinkdb</span>
+</pre></td></tr></table></figure><br>
       
     </div>
     <footer>
       
         
           <div id="readmore" class="alignright">
-            <a href="/2013/09/06/deploying-with-capistrano/#more" class="more-link">Xem thêm</a>
+            <a href="/2014/08/28/Install-RethinkDB-on-Mac-OSX/#more" class="more-link">Xem thêm</a>
           </div>
         
         
