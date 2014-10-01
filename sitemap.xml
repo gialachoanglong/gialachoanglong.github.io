@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nguyenlong.info/2014/09/10/install-nginx-MySQL-PHP-on-Ubuntu-14/</loc>
+    <lastmod>2014-09-09T19:10:47.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://nguyenlong.info/2014/08/28/Install-RethinkDB-on-Mac-OSX/</loc>
     <lastmod>2014-08-28T05:55:58.000Z</lastmod>
   </url>

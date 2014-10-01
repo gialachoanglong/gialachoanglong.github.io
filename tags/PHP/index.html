@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Web development | NguyenLong | Gia lạc tạp ký </title>
+  <title>PHP | NguyenLong | Gia lạc tạp ký </title>
   <meta name="author" content="NguyenLong">
   
   
@@ -67,7 +67,7 @@
 </header>
   <div id="content" class="inner">
     <div id="wrapper">
-<h2 class="archive-title category">Web development</h2>
+<h2 class="archive-title tag">PHP</h2>
 
   
     <article class="post">
@@ -88,30 +88,73 @@
     <header>
       
   
-    <h1 class="title"><a href="/2014/07/28/Quan-ly-Tasks-frontend-voi-Gulp/">Quản lý Tasks frontend với Gulp.js</a></h1>
+    <h1 class="title"><a href="/2014/09/10/install-nginx-MySQL-PHP-on-Ubuntu-14/">install dev server on Ubuntu 14</a></h1>
   
 
       
         <p class="published">
-          Published: <time datetime="2014-07-27T19:21:13.000Z">Jul 28 2014</time>
+          Published: <time datetime="2014-09-09T17:31:35.000Z">Sep 10 2014</time>
         </p>
       
     </header>
     
     <div class="entry">
       
-        <h3 id="Gulp-js_l&#xE0;_g&#xEC;">Gulp.js l&#xE0; g&#xEC;</h3>
-<center><br>    <img src="/images/gulp.png"><br></center>
+        <h2 id="Install_the_Nginx_Web_Server">Install the Nginx Web Server</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get update
+<span class="built_in">sudo</span> apt-get install nginx
+</pre></td></tr></table></figure>
 
-<p>Khi l&#xE0;m vi&#x1EC7;c v&#x1EDB;i v&#x1EDB;i frontend m&#xEC;nh th&#x1B0;&#x1EDD;ng ph&#x1EA3;i c&#xE1;c vi&#x1EC7;c nh&#x1B0; compile sass hay less th&#xE0;nh css r&#x1ED3;i g&#xF4;m c&#xE1;c file css ri&#xEA;ng l&#x1EBB; th&#xE0;nh 1  file, g&#xF4;m c&#xE1;c th&#x1B0; vi&#x1EC7;n js v&#xE0; c&#xE1;c file js trong project l&#x1EA1;i th&#xE0;nh 1 file hay l&#xE0; minify c&#xE1;c file css , js ho&#x1EB7;c image c&#xE1;c vi&#x1EC7;c n&#xE0;y tr&#x1B0;&#x1EDB;c &#x111;&#xE2;y m&#xEC;nh to&#xE0;n ph&#x1EA3;i t&#x1EF1; l&#xE0;m v&#xE0; m&#xEC;nh r&#x1EA5;t gh&#xE9;t &#x111;i&#x1EC1;u n&#xE0;y :( hi&#x1EC7;n t&#x1EA1;i th&#xEC; vi&#x1EC7;c n&#xE0;y &#x111;&#xE3; c&#xF3; nhi&#x1EC1;u tool &#x111;&#x1EC3; h&#x1ED7; tr&#x1EE3; m&#xEC;nh l&#xE0;m nh&#x1B0; <a href="http://gulpjs.com/" target="_blank" rel="external">gulp</a> v&#xE0; <a href="http://gruntjs.com" target="_blank" rel="external">grunt</a> m&#xEC;nh kh&#xF4;ng th&#xED;ch <strong>Grunt</strong> v&#xEC; th&#x1EA5;y n&#xF3; config d&#xE0;i d&#xF2;ng ph&#xFA;c t&#x1EA1;p qu&#xE1; n&#x1EBF;u c&#xF3; nhi&#x1EC1;u stask th&#xEC; s&#x1EBD; r&#x1EA5;t d&#xE0;i v&#xE0; kh&#xF3; nh&#xEC;n n&#xEA;n m&#xEC;nh ch&#x1ECD;n <strong>Gulp</strong><br>
+<h2 id="Install_PHP_for_Processing">Install PHP for Processing</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>sudo apt<span class="attribute">-get</span> install php5<span class="attribute">-cli</span> php5<span class="attribute">-fpm</span>
+</pre></td></tr></table></figure>
+
+<h2 id="Configure_the_PHP_Processor">Configure the PHP Processor</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> nano /etc/php5/fpm/php.ini
+</pre></td></tr></table></figure>
+
+<p>change <code>cgi.fix_pathinfo=1</code> to <code>cgi.fix_pathinfo=0</code></p>
+<p>Now, we just need to restart our PHP processor by typing:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> service php5-fpm restart
+</pre></td></tr></table></figure>
+
+<h2 id="Install_git_ruby_nodejs_mongodb">Install git ruby nodejs mongodb</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get install git ruby nodejs mongodb
+</pre></td></tr></table></figure>
+
+<h2 id="Install_RethinkDB">Install RethinkDB</h2>
+<p>To install the server, you have to add the RethinkDB repository to your list of repositories and install via apt-get. To do this, paste the following lines into your terminal:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="built_in">source</span> /etc/lsb-release &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;deb http://download.rethinkdb.com/apt <span class="variable">$DISTRIB_CODENAME</span> main&quot;</span> | <span class="built_in">sudo</span> tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | <span class="built_in">sudo</span> apt-key add -
+<span class="built_in">sudo</span> apt-get update
+<span class="built_in">sudo</span> apt-get install rethinkdb
+</pre></td></tr></table></figure>
+
+<h2 id="Install_Golang">Install Golang</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get install golang
+</pre></td></tr></table></figure>
+
+<h2 id="Install_Composer">Install Composer</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>curl <span class="attribute">-sS</span> https:<span class="comment">//getcomposer.org/installer | php</span>
+mv composer<span class="built_in">.</span>phar /usr/<span class="built_in">local</span>/bin/composer
+</pre></td></tr></table></figure>
       
     </div>
     <footer>
       
-        
-          <div id="readmore" class="alignright">
-            <a href="/2014/07/28/Quan-ly-Tasks-frontend-voi-Gulp/#more" class="more-link">Xem thêm</a>
-          </div>
         
         
       

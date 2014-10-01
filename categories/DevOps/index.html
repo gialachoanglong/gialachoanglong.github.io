@@ -88,6 +88,101 @@
     <header>
       
   
+    <h1 class="title"><a href="/2014/09/10/install-nginx-MySQL-PHP-on-Ubuntu-14/">install dev server on Ubuntu 14</a></h1>
+  
+
+      
+        <p class="published">
+          Published: <time datetime="2014-09-09T17:31:35.000Z">Sep 10 2014</time>
+        </p>
+      
+    </header>
+    
+    <div class="entry">
+      
+        <h2 id="Install_the_Nginx_Web_Server">Install the Nginx Web Server</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get update
+<span class="built_in">sudo</span> apt-get install nginx
+</pre></td></tr></table></figure>
+
+<h2 id="Install_PHP_for_Processing">Install PHP for Processing</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>sudo apt<span class="attribute">-get</span> install php5<span class="attribute">-cli</span> php5<span class="attribute">-fpm</span>
+</pre></td></tr></table></figure>
+
+<h2 id="Configure_the_PHP_Processor">Configure the PHP Processor</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> nano /etc/php5/fpm/php.ini
+</pre></td></tr></table></figure>
+
+<p>change <code>cgi.fix_pathinfo=1</code> to <code>cgi.fix_pathinfo=0</code></p>
+<p>Now, we just need to restart our PHP processor by typing:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> service php5-fpm restart
+</pre></td></tr></table></figure>
+
+<h2 id="Install_git_ruby_nodejs_mongodb">Install git ruby nodejs mongodb</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get install git ruby nodejs mongodb
+</pre></td></tr></table></figure>
+
+<h2 id="Install_RethinkDB">Install RethinkDB</h2>
+<p>To install the server, you have to add the RethinkDB repository to your list of repositories and install via apt-get. To do this, paste the following lines into your terminal:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="built_in">source</span> /etc/lsb-release &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;deb http://download.rethinkdb.com/apt <span class="variable">$DISTRIB_CODENAME</span> main&quot;</span> | <span class="built_in">sudo</span> tee /etc/apt/sources.list.d/rethinkdb.list
+wget -qO- http://download.rethinkdb.com/apt/pubkey.gpg | <span class="built_in">sudo</span> apt-key add -
+<span class="built_in">sudo</span> apt-get update
+<span class="built_in">sudo</span> apt-get install rethinkdb
+</pre></td></tr></table></figure>
+
+<h2 id="Install_Golang">Install Golang</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get install golang
+</pre></td></tr></table></figure>
+
+<h2 id="Install_Composer">Install Composer</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>curl <span class="attribute">-sS</span> https:<span class="comment">//getcomposer.org/installer | php</span>
+mv composer<span class="built_in">.</span>phar /usr/<span class="built_in">local</span>/bin/composer
+</pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+<!-- hackish -->
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+  
     <h1 class="title"><a href="/2013/09/06/deploying-with-capistrano/">Deploy ứng dụng web với Capistrano</a></h1>
   
 
@@ -127,6 +222,7 @@
 </nav>
 </div>
     <aside id="sidebar" class="alignright">
+    
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
     <input type="search" name="q" results="0" placeholder="Search">
@@ -141,7 +237,7 @@
   
     <li><a href="/categories/Database/">Database</a><small>2</small></li>
   
-    <li><a href="/categories/DevOps/">DevOps</a><small>1</small></li>
+    <li><a href="/categories/DevOps/">DevOps</a><small>2</small></li>
   
     <li><a href="/categories/Notes/">Notes</a><small>1</small></li>
   
@@ -168,12 +264,28 @@
   
     <li><a href="/tags/Nodejs/">Nodejs</a><small>1</small></li>
   
+    <li><a href="/tags/PHP/">PHP</a><small>1</small></li>
+  
     <li><a href="/tags/RethinkDB/">RethinkDB</a><small>1</small></li>
+  
+    <li><a href="/tags/Ubuntu/">Ubuntu</a><small>1</small></li>
+  
+    <li><a href="/tags/nginx/">nginx</a><small>1</small></li>
   
   </ul>
 </div>
 
-</aside>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- test -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-8631755209465785"
+     data-ad-slot="6519918151"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </aside>
     <div class="clearfix"></div>
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
